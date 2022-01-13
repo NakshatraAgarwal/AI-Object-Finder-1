@@ -23,8 +23,9 @@ function draw(){
    if(status != ""){
 
    ObjectDetector.detect(video, gotresults);
-
+console.log('going to enter for loop');
    for( i = 0; i < objects.length; i++){
+       console.log('entered for loop');
    fill("red");
     document.getElementById('status').innerHTML = "Status: Object Detected";
     percent = floor(objects[i].confidence * 100);
@@ -45,16 +46,8 @@ function draw(){
     else{
         document.getElementById('object_status').innerHTML = "Status: " + input_value + " Not Found";
     }
-    
-
-
-
-
-
    }
-
    }
-
 }
 
 function play(){
