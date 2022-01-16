@@ -1,6 +1,4 @@
 
-
-
 status = "";
 input_value = "";
 objects = [];
@@ -34,9 +32,10 @@ console.log('going to enter for loop');
     stroke('red');
     rect(objects[i].x, objects[i].y, objects[i].width, objects[i].height);
 
-    if(object[i].label == input_value){
-
-        document.getElementById('object_status').innerHTML = "Status: " + input_value + " Found";
+    if(objects[i].label == input_value){
+        
+      
+        document.getElementById('objects_status').innerHTML = "Status: " + input_value + " Found";
         var synth= window.speechSynthesis;
         speak_data= input_value + 'Found';
         var utterthis= new SpeechSynthesisUtterance(speak_data);
@@ -44,7 +43,7 @@ console.log('going to enter for loop');
     }
 
     else{
-        document.getElementById('object_status').innerHTML = "Status: " + input_value + " Not Found";
+        document.getElementById('objects_status').innerHTML = "Status: " + input_value + " Not Found";
     }
    }
    }
